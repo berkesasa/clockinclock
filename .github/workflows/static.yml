@@ -1,9 +1,7 @@
-name: Deploy Arrow Clock to GitHub Pages
+name: Static HTML Deploy
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
     branches: [ main ]
 
 permissions:
