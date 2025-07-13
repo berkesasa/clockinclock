@@ -41,8 +41,8 @@ body {
     width: 100vw;
     height: 100vh;
     display: grid;
-    grid-template-columns: repeat(auto-fit, 32px);
-    grid-template-rows: repeat(auto-fit, 32px);
+    grid-template-columns: repeat(auto-fit, 28px);
+    grid-template-rows: repeat(auto-fit, 28px);
     gap: 3px;
     background: black;
     align-content: center;
@@ -50,8 +50,8 @@ body {
 }
 
 .arrow-cell {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,7 +62,7 @@ body {
 }
 
 .arrow-line {
-    width: 16px;
+    width: 14px;
     height: 2px;
     background: white;
     transform-origin: left center;
@@ -84,12 +84,12 @@ body {
 .time-cell {
     background: #0f172a;
     border: 2px solid #1e293b;
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
 }
 
 .time-cell .arrow-line {
-    width: 18px;
+    width: 16px;
     height: 3px;
 }
 
@@ -125,7 +125,7 @@ body {
 }
 
 .corner-cell.top-left::before {
-    width: 14px;
+    width: 12px;
     height: 3px;
     top: 50%;
     left: 50%;
@@ -134,14 +134,14 @@ body {
 
 .corner-cell.top-left::after {
     width: 3px;
-    height: 14px;
+    height: 12px;
     top: 50%;
     left: 50%;
     transform: translateX(-50%);
 }
 
 .corner-cell.top-right::before {
-    width: 14px;
+    width: 12px;
     height: 3px;
     top: 50%;
     right: 50%;
@@ -150,14 +150,14 @@ body {
 
 .corner-cell.top-right::after {
     width: 3px;
-    height: 14px;
+    height: 12px;
     top: 50%;
     right: 50%;
     transform: translateX(50%);
 }
 
 .corner-cell.bottom-left::before {
-    width: 14px;
+    width: 12px;
     height: 3px;
     bottom: 50%;
     left: 50%;
@@ -166,14 +166,14 @@ body {
 
 .corner-cell.bottom-left::after {
     width: 3px;
-    height: 14px;
+    height: 12px;
     bottom: 50%;
     left: 50%;
     transform: translateX(-50%);
 }
 
 .corner-cell.bottom-right::before {
-    width: 14px;
+    width: 12px;
     height: 3px;
     bottom: 50%;
     right: 50%;
@@ -182,7 +182,7 @@ body {
 
 .corner-cell.bottom-right::after {
     width: 3px;
-    height: 14px;
+    height: 12px;
     bottom: 50%;
     right: 50%;
     transform: translateX(50%);
@@ -256,6 +256,56 @@ body {
     .colon-dot {
         width: 4px;
         height: 4px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, 24px);
+        grid-template-rows: repeat(auto-fit, 24px);
+        gap: 2px;
+    }
+    
+    .arrow-cell {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .arrow-line {
+        width: 12px;
+        height: 2px;
+    }
+    
+    .time-cell {
+        width: 24px;
+        height: 24px;
+        border: 2px solid #1e293b;
+    }
+    
+    .time-cell .arrow-line {
+        width: 14px;
+        height: 2.5px;
+    }
+    
+    .corner-cell.top-left::before,
+    .corner-cell.top-right::before,
+    .corner-cell.bottom-left::before,
+    .corner-cell.bottom-right::before {
+        width: 10px;
+        height: 2.5px;
+    }
+    
+    .corner-cell.top-left::after,
+    .corner-cell.top-right::after,
+    .corner-cell.bottom-left::after,
+    .corner-cell.bottom-right::after {
+        width: 2.5px;
+        height: 10px;
+    }
+    
+    .colon-dot {
+        width: 5px;
+        height: 5px;
     }
 }
 

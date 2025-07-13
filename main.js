@@ -105,10 +105,12 @@ function getCellSize() {
         return { size: 16, gap: 1, spacing: 17 };
     } else if (width <= 768) {
         return { size: 20, gap: 2, spacing: 22 };
+    } else if (width <= 1200) {
+        return { size: 24, gap: 2, spacing: 26 };
     } else if (window.orientation !== undefined && height <= 500) {
         return { size: 14, gap: 1, spacing: 15 };
     } else {
-        return { size: 32, gap: 3, spacing: 35 };
+        return { size: 28, gap: 3, spacing: 31 };
     }
 }
 
